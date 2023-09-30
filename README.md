@@ -191,8 +191,14 @@ source ~/.bashrc
 
 
 ```
-make flash CHIP=chip_name COMX=xxx # xxx is your com name
+sudo usermod -aG dialout xxx
+
+make CHIP=bl616 BOARD=bl616dk
+make ninja CHIP=bl616 BOARD=bl616dk
+
 make flash CHIP=bl616 COMX=/dev/ttyUSB0
+make flash CHIP=bl616 COMX=/dev/ttyACM0
+
 make flash CHIP=bl808 CPU_ID=d0 COMX=/dev/ttyUSB1
 make flash CHIP=bl808 CPU_ID=m0 COMX=/dev/ttyUSB1
 ```
