@@ -176,3 +176,23 @@ TODO
 ## Forum
 
 Bouffalolab Developer Forum: [https://bbs.bouffalolab.com/](https://bbs.bouffalolab.com/)
+
+
+* [Ai-M6X_SDK](https://github.com/Ai-Thinker-Open/aithinker_Ai-M6X_SDK)
+* [M1s_BL808_example](https://github.com/sipeed/M1s_BL808_example)
+
+
+```
+git clone https://gitee.com/bouffalolab/toolchain_gcc_t-head_linux.git
+sudo cp -rf toolchain_gcc_t-head_linux/ /usr/bin
+echo "export PATH=\"$PATH:/usr/bin/toolchain_gcc_t-head_linux/bin\""  >> ~/.bashrc
+source ~/.bashrc
+```
+
+
+```
+make flash CHIP=chip_name COMX=xxx # xxx is your com name
+make flash CHIP=bl616 COMX=/dev/ttyUSB0
+make flash CHIP=bl808 CPU_ID=d0 COMX=/dev/ttyUSB1
+make flash CHIP=bl808 CPU_ID=m0 COMX=/dev/ttyUSB1
+```
